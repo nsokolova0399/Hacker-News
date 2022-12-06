@@ -44,7 +44,7 @@ export function Comments({ id, update }: CommentsProps) {
                     </div>
                     <div>
                         {
-                            comments?.kids!==undefined && state ?  comments?.kids.map((it, index) => (<div style={{marginLeft:'1.5rem', backgroundColor:'#29272712',padding:'0.4rem'}}><Comments key={it} id={Number(it)}  update={update} /></div>)):""
+                            comments?.kids!==undefined && state ?  comments?.kids.map((it, index) => (<div style={{marginLeft:'1.5rem', backgroundColor:'#29272712',padding:'0.4rem'}}><Comments id={Number(it)}  update={update} /></div>)):""
                         }
                     </div>
                 </Col>
