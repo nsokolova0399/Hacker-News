@@ -1,4 +1,4 @@
-#Интерфейс для сайта [Hacker News](https://news.ycombinator.com/news), состоящий из двух страниц.
+# Интерфейс для сайта [Hacker News](https://news.ycombinator.com/news), состоящий из двух страниц.
 Посмотреть можно здесь: https://capable-starlight-afd13b.netlify.app/
 
 ### Главная страница
