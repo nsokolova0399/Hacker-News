@@ -3,7 +3,7 @@ import { NewsItem } from "./NewsItem"
 import { Story } from "./types"
 import { fetchStories, fetchTopStoriesIds} from "../utils/api"
 import { Layout } from 'antd';
-import { RedoOutlined } from '@ant-design/icons';
+import { RedoOutlined , LoadingOutlined} from '@ant-design/icons';
 const { Content } = Layout;
 
 
@@ -26,11 +26,20 @@ export function HomePage() {
     setTimeout(() => {
         loadStories();
     }, 60000);
+    const styleHeigthP = {
+        height:"100%",
+    }
+    const styleHeigthR = {
+        height:"100%",
+        width:"100%",
+        position:"absolute"
+    }
     return (
         <>
-             <Layout>
-            <Content style={{marginLeft:'auto', marginRight:'auto', marginTop:'1rem'}}>
-                <RedoOutlined onClick={handleClick} className="Icons" />
+             <Layout style={stories.length!==0 ? styleHeigthP: styleHeigthR}>
+                 {stories.length !== 0 ?  <RedoOutlined onClick={handleClick} className="Icons"/>:<LoadingOutlined className="IconsLoading" /> }
+            <Content style={{margin:'2rem', position:"relative", height:"100%"}}>
+
                 {stories.map((it, index) => (
                     <NewsItem key={it.id} id={it.id} title={it.title} score={it.score} by={it.by} time={it.time} url={it.url} index={index} />
             ))}

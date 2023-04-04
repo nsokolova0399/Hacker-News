@@ -67,7 +67,6 @@
 }
 .ContentStyleInterior{
   font-size: 1.8rem;
-
   background-color: #ffffff;
   border-radius: 19px;
   padding: 1rem;
@@ -75,10 +74,19 @@
 .Icons{
   font-size:3rem;
   color: rgba(20, 63, 94, 0.89);
-  margin-left: 95%;
+  margin-left: 90%;
   margin-bottom:1rem;
-}
+  margin-right: 5rem;
+  margin-top:2rem;
 
+}
+.IconsLoading{
+  position: relative;
+  font-size:3rem;
+  color: rgba(20, 63, 94, 0.89);
+  right: 0;
+  top:2rem;
+}
 .NewsPage{
   background-color: rgba(117, 182, 231, 0.45);
   margin-left: 5rem;
@@ -102,3 +110,4 @@
   font-size: 1rem;
   align-content: center;
 }
+
