@@ -38,7 +38,7 @@ export function HomePage() {
         <>
              <Layout style={stories.length!==0 ? styleHeigthP: styleHeigthR}>
                  {stories.length !== 0 ?  <RedoOutlined onClick={handleClick} className="Icons"/>:<LoadingOutlined className="IconsLoading" /> }
-            <Content style={{margin:'2rem', position:"relative", height:"100%"}}>
+            <Content style={{margin:'2rem'}}>
 
                 {stories.map((it, index) => (
                     <NewsItem key={it.id} id={it.id} title={it.title} score={it.score} by={it.by} time={it.time} url={it.url} index={index} />
